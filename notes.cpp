@@ -49,7 +49,7 @@ int variable_types_lesson()
 {
   /*
   Variable Types:
-  1.
+  1.Integer
   2.
   3.
   */  
