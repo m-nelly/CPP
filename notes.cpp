@@ -11,6 +11,7 @@ using namespace std;
 //C++ does not process whitespace; functions and procedures should be ended with a semi-colon.
 int basics_lesson();
 int variables_lesson();
+int variable_types_lesson();
 
 //The execution of all C++ programs is derived from a call to the main() function.
 int main() //Declaration
@@ -44,7 +45,12 @@ int variables_lesson()
     */
 };
 
-int next_lesson()
+int variable_types_lesson()
 {
-    
-}
+  /*
+  Variable Types:
+  1.
+  2.
+  3.
+  */  
+};
