@@ -13,6 +13,7 @@ using namespace std;
 int basics_lesson();
 int variables_lesson();
 int variable_types_lesson();
+int user_input();
 
 //The execution of all C++ programs is derived from a call to the main() function.
 int main() //Declaration
@@ -23,6 +24,7 @@ int main() //Declaration
     basics_lesson();
     variables_lesson();
     variable_types_lesson();
+    user_input();
 }
 
 int basics_lesson()
@@ -84,4 +86,14 @@ int variable_types_lesson()
     cout << g << endl;
     cout << h << endl;
     cout << permanent << endl;
+};
+
+int user_input()
+{
+    string name;
+
+    cout << "Enter your name: ";
+    cin >> name; //Stores console input in $name.
+
+    cout << "Your name is: " << name;
 };
