@@ -10,30 +10,37 @@ using namespace std;
 
 //Functions should be declared before main as a 'Forward Declaration' and defined after.
 //C++ does not process whitespace; functions and procedures should be ended with a semi-colon.
-int basics_lesson();
-int variables_lesson();
-int variable_types_lesson();
-int user_input();
+void basics_lesson();
+void variables_lesson();
+void variable_types_lesson();
+void user_input();
+void arithmetic_and_assignment_operators();
+void relational_operators();
 
 //The execution of all C++ programs is derived from a call to the main() function.
 int main() //Declaration
 { //Definition
-
     //This is the only function executed by the compiler.
     //This is the body of the function.
-    basics_lesson();
-    variables_lesson();
-    variable_types_lesson();
-    user_input();
+    
+    //Uncomment lesson(s) desired to run.
+
+    //Lessons:    
+        //basics_lesson();
+        //variables_lesson();
+        //variable_types_lesson();
+        //user_input();
+        //arithmetic_and_assignment_operators();
+        //relational_operators();
 }
 
-int basics_lesson()
+void basics_lesson()
 {
     cout << "This is a test." << endl;
     //Sends "This is a test." to the console output and ends the line.
 };
 
-int variables_lesson()
+void variables_lesson()
 {
     int x = 4;
     //Assigns a value of 4 to x.
@@ -49,7 +56,7 @@ int variables_lesson()
     */
 };
 
-int variable_types_lesson()
+void variable_types_lesson()
 {
     //Define variable type, name, and then value
     
@@ -88,12 +95,63 @@ int variable_types_lesson()
     cout << permanent << endl;
 };
 
-int user_input()
+void user_input()
 {
     string name;
 
     cout << "Enter your name: ";
     cin >> name; //Stores console input in $name.
 
-    cout << "Your name is: " << name;
+    cout << "Your name is: " << name << endl;
+};
+
+void arithmetic_and_assignment_operators()
+{
+    int a = 10;
+    int b = 5;
+
+    cout << a + b << endl;
+    cout << a * b << endl;
+    cout << a - b << endl;
+    cout << a / b << endl; 
+    cout << a % b << endl; //Returns remainder after division.
+    
+    //Result matches the type of the input. If expecting a double, assign a variable type of double.
+    
+    cout << (b += 1) << endl; //increments b by one.
+    cout << (b -= 1) << endl; //decrements b by one.
+    
+    cout << b<< endl;
+    cout << b++ << endl; //Increments after sending to ourput.
+    cout << b << endl ; 
+    cout << ++b << endl; //Increments before sending to output.
+};
+
+void relational_operators()
+{
+    int a = 10;
+    int b = 5;
+
+    /*
+    '=' assigns values.
+    'a == b' Returns true (1) when values match.
+    'a != b' Returns true (1) when values do not match.
+    'a > b'Returns true (1) when a is greater than b.
+    'a < b'Returns true (1) when a is less than b.
+    'a >= b'Returns true (1) when a is greater than or equal to b.
+    'a <= b'Returns true (1) when a is less than or equal to b.
+    */
+
+   cout << (a == b) << endl;
+   cout << (a != b) << endl;
+   cout << (a > b) << endl;
+   cout << (a < b) << endl;
+   cout << (a >= b) << endl;
+   cout << (a <= b) << endl;
+
+};
+
+void logical_operators()
+{
+
 };
