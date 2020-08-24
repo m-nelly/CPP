@@ -6,3 +6,6 @@ This repo will contain all of the C++ code I write
 
 All entries will be commented to highlight new concepts 
     as they apear in as linear a fashion as I can manage.
+
+Eventually, lesson blocks will be moved to separate header 
+    files for organizational purposes.
