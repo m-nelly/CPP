@@ -2,6 +2,7 @@
 
 //Imports IO stream library.
 #include <iostream>
+//Imports string library.
 #include <string>
 
 using namespace std;
@@ -16,6 +17,8 @@ void variable_types_lesson();
 void user_input();
 void arithmetic_and_assignment_operators();
 void relational_operators();
+void logical_operators();
+void bitwise_operators();
 
 //The execution of all C++ programs is derived from a call to the main() function.
 int main() //Declaration
@@ -32,6 +35,8 @@ int main() //Declaration
         //user_input();
         //arithmetic_and_assignment_operators();
         //relational_operators();
+        //logical_operators();
+        //bitwise_operators();
 }
 
 void basics_lesson()
@@ -153,5 +158,122 @@ void relational_operators()
 
 void logical_operators()
 {
+    int a = 4;
+    int b = 5;
 
+    /*
+    The && operator 'and' returns true (1) if both operations are true.
+    The || operator 'or' returns true (1) if wither operation is true.
+    The ! operator 'not' returns the opposite boolean for a given operation.
+    */
+
+    cout << (a > 1 && a < b) << endl;
+    cout << (a > 1 || a > b) << endl;
+    cout << !(a > 5 && a > b) << endl;
+    
+
+
+};
+
+void bitwise_operators() //Advanced - Optional
+{
+    //Bitwise operators are designed to work at the bit level.
+
+        /*
+        *********************************************************************
+        Decimal to Binary Conversion:
+
+        Most Significant Bit - Leftmost Bit
+        Least Significant Bit - Rightmost Bit
+
+        Least_Significant_Bit = (2 ^ 0) = (1)
+        Second_Significant_Bit = (2 ^ 1) = (2)
+        Third_Significant_Bit = (2 ^ 2) = (4)
+        ...
+        Eighth_Significant_Bit = (2 ^ 7) = (128)
+
+        Formula: (2 ^ (n-1)) where n is positions from the left.
+
+        Example: 155 > Binary
+
+        1. Determine significant bits. 
+            Add one to the highest x where (2 ^ x) < 155 
+            (2 ^ 7) = 128, (2 ^ 8) = 256
+            (7 + 1) = 8 significant bits.
+        
+        2. Start with the most significant bit as a 1 and all others zero.
+            1 0 0 0 0 0 0 0 = 128
+        
+        3. Add next most significant bit and compare total to 155
+            1 1 0 0 0 0 0 0 = 192
+        
+        4. If the total is greater than 155, change the bit to a zero and 
+            move on to the next.
+            1 0 1 0 0 0 0 0 = 140
+        
+        5. Repeat steps 4 & 5 until you reach 155.
+            1 0 1 1 0 0 0 0 = 156
+            1 0 1 0 1 0 0 0 = 148
+            1 0 1 0 1 1 0 0 = 152
+            1 0 1 0 1 1 1 0 = 154
+            1 0 1 0 1 1 1 1 = 155
+
+        Note: '^' is the XOR operator in C++ and is only used here as 
+              notation for exponential operation. 
+              This will not work in C++. Use the pow() function instead.
+        *********************************************************************
+        */
+    /*
+    Bitwise AND - &
+    Bitwise OR - |
+    Bitwise NOT - ~
+    Bitwise XOR - ^ (XOR returns true (1) if one bit or the other is a 1, but not both.)
+    Bitwise Shift Left - <<
+    Bitwise Shift Right - >>
+    */
+    
+    /*
+    Returns 2
+
+     1 0 1 0
+     0 0 1 0
+    &_______
+     0 0 1 0
+    */
+    cout << (10 & 2) << endl;
+
+    /*
+    Returns 10
+
+     1 0 1 0
+     0 0 1 0
+    |_______
+     1 0 1 0
+    */
+    cout << (10 | 2) << endl;
+
+    /*
+    Returns -11 because all bits in the address space are reversed and
+        the first bit in the adress space is a large, negative number. 
+     1 0 1 0
+    ~_______
+     0 1 0 1
+     
+    */
+    cout << (~10) << endl;
+
+    /*
+    Returns 8
+     1 0 1 0
+     0 0 1 0
+    ^_______
+     1 0 0 0
+     */
+    cout << (10 ^ 2) << endl;
+
+    //Adds a zero bit after the least significant bit. Equivalent to (n * 2)
+    cout << (2 << 1) << endl;
+
+    //Removes the least significant bit. Equivalent to (n / 2)
+    cout << (2 >> 1) << endl;
 };
