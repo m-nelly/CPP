@@ -12,15 +12,16 @@ using namespace std;
 //Functions should be declared before main as a 'Forward Declaration' and defined after.
 //C++ does not process whitespace; functions and procedures should be ended with a semi-colon.
 
-void basics_lesson();
-void variables_lesson();
-void variable_types_lesson();
+void basics();
+void variables();
+void variable_types();
 void user_input();
 void arithmetic_and_assignment_operators();
 void relational_operators();
 void logical_operators();
 void bitwise_operators();
 void conditional_statements();
+void conditional_switch();
 
 //The execution of all C++ programs is derived from a call to the main() function.
 int main() //Declaration
@@ -39,16 +40,17 @@ int main() //Declaration
         //relational_operators();
         //logical_operators();
         //bitwise_operators();
-        conditional_statements();
+        //conditional_statements();
+        //conditional_switch();
 }
 
-void basics_lesson()
+void basics()
 {
     cout << "This is a test." << endl;
     //Sends "This is a test." to the console output and ends the line.
 };
 
-void variables_lesson()
+void variables()
 {
     int x = 4;
     //Assigns a value of 4 to x.
@@ -64,7 +66,7 @@ void variables_lesson()
     */
 };
 
-void variable_types_lesson()
+void variable_types()
 {
     //Define variable type, name, and then value
     
@@ -307,5 +309,11 @@ void conditional_statements()
     {
         cout << "a" << " = " << "b" << endl;
     }
+
+}
+
+void conditional_switch()
+{
+    int x = 50;
 
 }
