@@ -11,6 +11,7 @@ using namespace std;
 
 //Functions should be declared before main as a 'Forward Declaration' and defined after.
 //C++ does not process whitespace; functions and procedures should be ended with a semi-colon.
+
 void basics_lesson();
 void variables_lesson();
 void variable_types_lesson();
@@ -19,6 +20,7 @@ void arithmetic_and_assignment_operators();
 void relational_operators();
 void logical_operators();
 void bitwise_operators();
+void conditional_statements();
 
 //The execution of all C++ programs is derived from a call to the main() function.
 int main() //Declaration
@@ -37,6 +39,7 @@ int main() //Declaration
         //relational_operators();
         //logical_operators();
         //bitwise_operators();
+        conditional_statements();
 }
 
 void basics_lesson()
@@ -277,3 +280,32 @@ void bitwise_operators() //Advanced - Optional
     //Removes the least significant bit. Equivalent to (n / 2)
     cout << (2 >> 1) << endl;
 };
+
+void conditional_statements()
+{
+    //This lesson should be relatively straghtforward.
+    //If further explanation would be helpful, please comment on GitHub.
+    int a, b;
+    
+    cout << "Enter a: ";
+    cin >> a;
+
+    cout << "Enter b: ";
+    cin >> b;
+
+    if (a > b)
+    {
+        cout << "a" << " > " << "b" << endl;
+    }
+    
+    else if (a < b)
+    {
+        cout << "a" << " < " << "b" << endl;
+    }
+
+    else 
+    {
+        cout << "a" << " = " << "b" << endl;
+    }
+
+}
