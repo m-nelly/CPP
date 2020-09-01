@@ -24,8 +24,8 @@ void conditional_statements();
 void conditional_switch();
 
 //The execution of all C++ programs is derived from a call to the main() function.
-int main() //Declaration
-{ //Definition
+int main() //Declaration of function.
+{ //Definition of function.
     //This is the only function executed by the compiler.
     //This is the body of the function.
     
@@ -313,7 +313,36 @@ void conditional_statements()
 }
 
 void conditional_switch()
-{
-    int x = 50;
+{   
+    // A switch evaluates a number against several constant integers. 
+    // Use switch statements to create menu options and redirect to other functions.
+
+    int x;
+
+    cout << "Enter a value from one to 5: ";
+    cin >> x;
+
+
+    switch (x)
+    {
+        case 1: //when x == 1, perform the following operation.
+            cout << "1" << endl;
+            break; // A break must be included for a switch to operate correctly.
+        case 2:
+            cout << "2" << endl;
+            break;
+        case 3:
+            cout << "3" << endl;
+            break;
+        case 4:
+            cout << "4" << endl;
+            break;
+        case 5:
+            cout << "5" << endl;
+            break;
+        default :
+            cout << "Invalid Input!"
+
+    }
 
 }
