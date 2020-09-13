@@ -22,6 +22,8 @@ void logical_operators();
 void bitwise_operators();
 void conditional_statements();
 void conditional_switch();
+void conditional_operator();
+void calculator(); //Assignment
 
 //The execution of all C++ programs is derived from a call to the main() function.
 int main() //Declaration of function.
@@ -42,6 +44,8 @@ int main() //Declaration of function.
         //bitwise_operators();
         //conditional_statements();
         //conditional_switch();
+        //conditional_operator();
+        //calculator();
 }
 
 void basics()
@@ -346,3 +350,15 @@ void conditional_switch()
     }
 
 }
+
+void conditional_operator()
+{   
+    int a = 10;
+    int b = 11;
+    //The conditional operator '?' can be used to simplify IF statements. 
+    string test = (a > b) ? "a > b" : "a != b"; //IF (a > b) THEN ? "a > b" ELSE : "a != b"
+
+    cout << test << endl;
+}
+
+void calculator(); //Assignment
