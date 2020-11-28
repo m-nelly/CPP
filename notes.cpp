@@ -24,6 +24,7 @@ void conditional_statements();
 void conditional_switch();
 void conditional_operator();
 void calculator(); //Assignment
+void arrays();
 
 //The execution of all C++ programs is derived from a call to the main() function.
 int main() //Declaration of function.
@@ -46,6 +47,7 @@ int main() //Declaration of function.
         //conditional_switch();
         //conditional_operator();
         //calculator();
+        //arrays();
 }
 
 void basics()
@@ -361,4 +363,22 @@ void conditional_operator()
     cout << test << endl;
 }
 
-void calculator(); //Assignment
+void calculator() //Assignment
+{
+
+}   
+
+void arrays()
+{
+    
+    int x[4]; // creates an array of four integers.
+
+    // array indexes start at 0
+
+    cout << x[0] << endl; // returns 0 because x[0] is uninitialized.
+
+    x[0] = 4; // assigns 4 to x[0]
+
+    cout << x[0] << endl; // returns stored value of 4
+
+}
